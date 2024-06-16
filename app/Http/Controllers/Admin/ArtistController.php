@@ -46,13 +46,33 @@ class ArtistController extends Controller
          return redirect('/artists')->with('success', 'Artist has been created successfully.');
     }
 
-    public function edit(Artist $artist){
-        $artist = Artist::all();
-        return view('admin.artists.edit', ['artist' => $artist]);
+    public function edit($id){
+
+        $artist = Artist::findOrFail($id);
+        $allGenres = Genre::all();
+        $selectedGenres = $artist->genres;
+        return view('admin.artists.edit', ['artist' => $artist, 'selectedGenres' => $selectedGenres, 'allGenres' => $allGenres]);
     }
 
 
-    public function update($id){
+    public function update(Request $request, $id){
+
+        $artist = Artist::findOrFail($id);
+        $validatedData = $request->validate([
+           'name'=>'required|string|max:255',
+           'bio'=>'required|string',
+        ]);
+
+        $artist->update($validatedData);
+
+        // sync genre
+        if($request->has('genres')){
+            $artist->genres()->sync($request->input('genres'));
+        }else {
+            $artist->genres()->detach();
+        }
+
+        return redirect('/artists')->with('success', 'Artist has been updated successfully.');
 
     }
 

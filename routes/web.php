@@ -14,7 +14,9 @@ Route::domain('admin.'.env('APP_URL'))->group(function (){
     Route::get('/artists/create',[ArtistController::class,'create']);
     Route::post('/artists',[ArtistController::class,'store']);
 
-    Route::put('/artist/{id}',[ArtistController::class,'edit']);
+    Route::get('/artist/edit/{id}',[ArtistController::class,'edit']);
+
+    Route::put('/artist/update/{id}',[ArtistController::class,'update']);
     Route::delete('/artist/{artist}',[ArtistController::class,'destroy']);
 
 
