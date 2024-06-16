@@ -1,7 +1,7 @@
 <div>
     <div class="add-button">
 
-        <a href="/artists/create" class="add-artist-button">+ Add Artist</a>
+        <a href="{{$url}}" class="add-artist-button">{{$slot}}</a>
     </div>
     <form>
         @csrf

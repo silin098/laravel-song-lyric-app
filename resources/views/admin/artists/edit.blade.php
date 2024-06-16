@@ -43,7 +43,7 @@
             @enderror
             <div class="form-group">
                 <a href="/artists">Cancel</a>
-                <button type="submit">Cancel</button>
+                <button type="submit">Save</button>
             </div>
 
         </form>

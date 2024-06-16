@@ -8,12 +8,15 @@ use Illuminate\View\Component;
 
 class InputForm extends Component
 {
+
     /**
      * Create a new component instance.
+     * @param string url
+     * @return void
      */
-    public function __construct()
+    public function __construct(public string $url)
     {
-        //
+
     }
 
     /**

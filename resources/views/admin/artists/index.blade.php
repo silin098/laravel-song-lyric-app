@@ -4,7 +4,8 @@
 
     <h2 class="artist-table">Artists Info</h2>
     <div class="artist-input-form">
-        <x-input-form/>
+
+        <x-input-form url="/artist/create">Add Artist</x-input-form>
 
     </div>
     <table>

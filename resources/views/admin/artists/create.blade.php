@@ -25,13 +25,7 @@
                     @foreach($genres as $genre)
                         <option value="{{$genre->id}}">{{$genre->name}}</option>
                     @endforeach
-{{--                    <option value="Pop">Pop</option>--}}
-{{--                    <option value="Rock">Rock</option>--}}
-{{--                    <option value="Hip Hop">Hip Hop</option>--}}
-{{--                    <option value="Jazz">Jazz</option>--}}
-{{--                    <option value="Electronic">Electronic</option>--}}
-{{--                    <option value="Classical">Classical</option>--}}
-{{--                    <option value="Country">Country</option>--}}
+
                 </select>
             </div>
             @error('genres')

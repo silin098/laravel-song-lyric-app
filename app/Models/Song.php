@@ -21,5 +21,9 @@ class Song extends Model
         return $this->belongsTo(Artist::class);
     }
 
+    public function genres(){
+        return $this->belongsToMany(Genre::class, 'song_genre');
+    }
+
 
 }
