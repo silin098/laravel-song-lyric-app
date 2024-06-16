@@ -20,8 +20,8 @@ class ArtistFactory extends Factory
     {
         return [
             'name'=>$this->faker->name(),
-            'genre'=>$this->faker->randomElement(['Rock','Pop','Jazz','Romance','R&B','Classical']),
-            'country'=>$this->faker->country(),
+            'slug'=>$this->faker->slug(),
+            'bio'=>$this->faker->sentence(),
         ];
     }
 }

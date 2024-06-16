@@ -19,10 +19,9 @@ class SongFactory extends Factory
     public function definition(): array
     {
         return [
-            'title'=>$this->faker->streetName(),
-            'artist_id'=>Artist::factory(),
+            'title'=>$this->faker->name(),
             'album_id'=>Album::factory(),
-            'duration'=>$this->faker->time,
+
         ];
     }
 }

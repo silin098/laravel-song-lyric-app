@@ -13,9 +13,9 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $count = ['artistCount'=>Artist::count(),'songCount'=>Song::count(),'albumCount'=>Album::count(),'genre'=>Artist::distinct()->count('genre')];
+        //$count = ['artistCount'=>Artist::count(),'songCount'=>Song::count(),'albumCount'=>Album::count(),'genre'=>Artist::distinct()->count('genre')];
 
-        return view('admin.dashboard')->with('count',$count);
+        return view('admin.dashboard');
 
     }
 }

@@ -12,5 +12,6 @@
 
      {{$slot}}
     <x-footer/>
+<script src="{{asset('/app.js')}}" ></script>
 </body>
 </html>

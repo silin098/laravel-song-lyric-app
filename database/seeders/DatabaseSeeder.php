@@ -19,6 +19,6 @@ class DatabaseSeeder extends Seeder
 
         //Artist::factory(10)->create();
         //Album::factory(10)->create();
-      $this->call(LyricSeeder::class);
+      $this->call(SongSeeder::class);
     }
 }

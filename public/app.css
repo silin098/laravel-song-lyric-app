@@ -1,3 +1,14 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+    font-family: "Fira Code", serif;
+    height: 100vh;
+}
 table,th,td {
     border:1px solid black;
     padding:0.5rem;
@@ -8,5 +19,125 @@ table,th,td {
     text-align: center;
 }
 
+button {
+    cursor: pointer;
+}
+
+.artist-table{
+    text-align: center;
+    text-decoration: underline;
+}
+.artist-input-form{
+    text-align: center;
+    margin:1rem 0;
+}
+
+.add-button{
+    display: inline-block; /* Makes it behave like a button */
+    margin-bottom: 1rem;
+    padding: 10px 20px; /* Adjust padding to your liking */
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    text-decoration: none; /* Removes underline */
+    border: none; /* Removes default border */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Changes cursor to a pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+
+
+}
+.add-button a{
+    font-family: "Fira Code", serif;
+    text-decoration: none;
+    color:white;
+
+}
+.add-button:hover {
+    background-color: #3a6695;
+}
+input {
+    padding:0.3rem;
+    width:10%
+}
+.search-button{
+    padding:0.4rem;
+
+    border: 0;
+    outline: 1px solid black;
+}
+
+.search-button:hover {
+    background-color: gray;
+}
+/* form css */
+
+.form-container {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 500px;
+    margin:6% auto;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+.form-group textarea {
+    height: 100px;
+}
+
+.form-group button {
+    background-color: #3a6695;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition:background-color 0.3s;
+}
+
+.form-group button:hover {
+    background-color: #2763b1;
+}
+
+.error {
+    color:darkred;
+    font-size: smaller;
+}
 
 
