@@ -12,7 +12,7 @@ class ArtistController extends Controller
     public function index()
     {
 
-        $artists = Artist::withCount('songs')->get();
+        $artists = Artist::withCount('songs')->latest()->get();
         return view('admin.artists.index', ['artists' => $artists]);
 
     }
@@ -44,5 +44,20 @@ class ArtistController extends Controller
          $artist->genres()->attach($request->input('genres'));
 
          return redirect('/artists')->with('success', 'Artist has been created successfully.');
+    }
+
+    public function edit(Artist $artist){
+        $artist = Artist::all();
+        return view('admin.artists.edit', ['artist' => $artist]);
+    }
+
+
+    public function update($id){
+
+    }
+
+    public function destroy(Artist $artist){
+        $artist->delete();
+        return redirect('/artists')->with('success', 'Artist has been deleted successfully.');
     }
 }

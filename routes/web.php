@@ -9,9 +9,14 @@ use Illuminate\Support\Facades\Route;
 Route::domain('admin.'.env('APP_URL'))->group(function (){
 
     Route::get('/', [DashboardController::class,'index']);
+//  Artist Route...
     Route::get('/artists',[ArtistController::class,'index']);
     Route::get('/artists/create',[ArtistController::class,'create']);
     Route::post('/artists',[ArtistController::class,'store']);
+
+    Route::put('/artist/{id}',[ArtistController::class,'edit']);
+    Route::delete('/artist/{artist}',[ArtistController::class,'destroy']);
+
 
 
 

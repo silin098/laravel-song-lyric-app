@@ -1,7 +1,7 @@
 <x-layout>
     <div class="form-container">
         <h2>Update Artists</h2>
-        <form action="/artists" method="post">
+        <form action="/artists/{{$artist->id}}" method="post">
             @csrf
             @method('put')
             <div class="form-group">

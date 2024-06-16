@@ -29,8 +29,15 @@
             <td>{{$artist->name}}</td>
             <td>{{$artist->songs_count}}</td>
             <td>{{$artist->created_at->diffForHumans()}}</td>
-            <td><button>Edit</button></td>
-            <td><button>Delete</button></td>
+            <td><a href="{{$artist->id}}">Edit</a></td>
+            <td>
+                <form action="/artist/{{$artist->id}}" method="POST">
+                    @csrf
+                    @method('delete')
+                    <button type="submit" onclick="return confirm('Are you Sure You want to Delete ')">Delete</button>
+                </form>
+
+            </td>
 
         </tr>
         @endforeach
